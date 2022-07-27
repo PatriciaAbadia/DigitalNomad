@@ -10,21 +10,30 @@ public class WeatherDetail {
 
     private String city;
     private String season;
+    private String feelWeather;
     private int feelTemperature;
+    private String realWeather;
     private int realTemperature;
+    private String feelDamp;
     private int humidity;
+    private String isRainy;
     private int rain;
+
 
     public WeatherDetail() {
     }
 
-    public WeatherDetail(String citySeason, String city, String season, int feelTemperature, int realTemperature, int humidity, int rain) {
+    public WeatherDetail(String citySeason, String city, String season, String feelWeather, int feelTemperature, String realWeather, int realTemperature, String feelDamp, int humidity, String isRainy, int rain) {
         this.citySeason = citySeason;
         this.city = city;
         this.season = season;
+        this.feelWeather = feelWeather;
         this.feelTemperature = feelTemperature;
+        this.realWeather = realWeather;
         this.realTemperature = realTemperature;
+        this.feelDamp = feelDamp;
         this.humidity = humidity;
+        this.isRainy = isRainy;
         this.rain = rain;
     }
 
@@ -52,12 +61,28 @@ public class WeatherDetail {
         this.season = season;
     }
 
+    public String getFeelWeather() {
+        return feelWeather;
+    }
+
+    public void setFeelWeather(String feelWeather) {
+        this.feelWeather = feelWeather;
+    }
+
     public int getFeelTemperature() {
         return feelTemperature;
     }
 
     public void setFeelTemperature(int feelTemperature) {
         this.feelTemperature = feelTemperature;
+    }
+
+    public String getRealWeather() {
+        return realWeather;
+    }
+
+    public void setRealWeather(String realWeather) {
+        this.realWeather = realWeather;
     }
 
     public int getRealTemperature() {
@@ -68,12 +93,28 @@ public class WeatherDetail {
         this.realTemperature = realTemperature;
     }
 
+    public String getFeelDamp() {
+        return feelDamp;
+    }
+
+    public void setFeelDamp(String feelDamp) {
+        this.feelDamp = feelDamp;
+    }
+
     public int getHumidity() {
         return humidity;
     }
 
     public void setHumidity(int humidity) {
         this.humidity = humidity;
+    }
+
+    public String getIsRainy() {
+        return isRainy;
+    }
+
+    public void setIsRainy(String isRainy) {
+        this.isRainy = isRainy;
     }
 
     public int getRain() {

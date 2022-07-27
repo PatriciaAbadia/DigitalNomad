@@ -1,0 +1,24 @@
+
+      .container {
+        font-family: 'Merton', sans-serif;
+        color: rgba(28, 28, 28, 0.996);
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 40px; 
+    } 
+    main {
+        color: rgba(28, 28, 28, 0.996);
+        text-align: right;
+        font-family: 'Bricklane';
+
+    }   
+    .mat-tab-group {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }  
+
+
+
+      

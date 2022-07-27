@@ -1,55 +1,56 @@
-package com.ironhack.citydetailservice.model;
+package com.ironhack.useredgeservice.controller.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 
-@Entity
-public class CityInfo {
-    @Id
+public class WeatherDTO {
+    private String citySeason;
     private String city;
+    private String season;
+    private String feelWeather;
+    private int feelTemperature;
+    private String realWeather;
+    private int realTemperature;
+    private String feelDamp;
+    private int humidity;
+    private String isRainy;
+    private int rain;
     private String country;
     private String continent;
     private BigDecimal totalScore;
     private BigDecimal costOfLife;
-    private Integer remoteWorkers;
-
+    private int remoteWorkers;
     private String internet;
-
     private String fun;
-
     private String nightlife;
-
     private String safety;
-
     private String lackOfCrime;
-
     private String walkability;
-
     private String racism;
-
     private String foreignersFriendly;
-
     private String freedomOfSpeech;
-
     private String femaleFriendly;
-    @Column(name = "LGBTQ_friendly")
     private String LGBTQFriendly;
-
     private String englishSpeaking;
     private BigDecimal latitude;
     private BigDecimal longitude;
-
     private String nearBeach;
     private String photo;
 
-
-    public CityInfo() {
+    public WeatherDTO() {
     }
 
-    public CityInfo(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, Integer remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo) {
+    public WeatherDTO(String citySeason, String city, String season, String feelWeather, int feelTemperature, String realWeather, int realTemperature, String feelDamp, int humidity, String isRainy, int rain, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, int remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo) {
+        this.citySeason = citySeason;
         this.city = city;
+        this.season = season;
+        this.feelWeather = feelWeather;
+        this.feelTemperature = feelTemperature;
+        this.realWeather = realWeather;
+        this.realTemperature = realTemperature;
+        this.feelDamp = feelDamp;
+        this.humidity = humidity;
+        this.isRainy = isRainy;
+        this.rain = rain;
         this.country = country;
         this.continent = continent;
         this.totalScore = totalScore;
@@ -73,12 +74,92 @@ public class CityInfo {
         this.photo = photo;
     }
 
+    public String getCitySeason() {
+        return citySeason;
+    }
+
+    public void setCitySeason(String citySeason) {
+        this.citySeason = citySeason;
+    }
+
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getSeason() {
+        return season;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
+    public String getFeelWeather() {
+        return feelWeather;
+    }
+
+    public void setFeelWeather(String feelWeather) {
+        this.feelWeather = feelWeather;
+    }
+
+    public int getFeelTemperature() {
+        return feelTemperature;
+    }
+
+    public void setFeelTemperature(int feelTemperature) {
+        this.feelTemperature = feelTemperature;
+    }
+
+    public String getRealWeather() {
+        return realWeather;
+    }
+
+    public void setRealWeather(String realWeather) {
+        this.realWeather = realWeather;
+    }
+
+    public int getRealTemperature() {
+        return realTemperature;
+    }
+
+    public void setRealTemperature(int realTemperature) {
+        this.realTemperature = realTemperature;
+    }
+
+    public String getFeelDamp() {
+        return feelDamp;
+    }
+
+    public void setFeelDamp(String feelDamp) {
+        this.feelDamp = feelDamp;
+    }
+
+    public int getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(int humidity) {
+        this.humidity = humidity;
+    }
+
+    public String getIsRainy() {
+        return isRainy;
+    }
+
+    public void setIsRainy(String isRainy) {
+        this.isRainy = isRainy;
+    }
+
+    public int getRain() {
+        return rain;
+    }
+
+    public void setRain(int rain) {
+        this.rain = rain;
     }
 
     public String getCountry() {
@@ -113,11 +194,11 @@ public class CityInfo {
         this.costOfLife = costOfLife;
     }
 
-    public Integer getRemoteWorkers() {
+    public int getRemoteWorkers() {
         return remoteWorkers;
     }
 
-    public void setRemoteWorkers(Integer remoteWorkers) {
+    public void setRemoteWorkers(int remoteWorkers) {
         this.remoteWorkers = remoteWorkers;
     }
 
@@ -249,3 +330,5 @@ public class CityInfo {
         this.photo = photo;
     }
 }
+
+

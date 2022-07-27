@@ -1,0 +1,35 @@
+.city-title {
+    position: absolute;
+    color: cornflowerblue;
+    font-weight: bolder;
+}
+
+.city-container {
+    /* visualizar varias fotos por fila */
+    display: flex;  
+    flex-wrap: wrap; /* wrap: quebra a linha */
+    justify-content: left; /* centraliza o conteudo */
+    align-items: top; /* centraliza o conteudo */
+    margin: 0 auto; /* centraliza o conteudo */
+    width: 20%; /* largura total */
+    height: 100%; /* altura total */
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding: 0 5px;
+    margin: auto;
+    margin-top: 10px;
+    
+
+   
+  
+  
+   
+ 
+
+    
+}
+

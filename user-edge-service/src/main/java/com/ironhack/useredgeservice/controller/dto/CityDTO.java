@@ -1,54 +1,35 @@
-package com.ironhack.citydetailservice.model;
+package com.ironhack.useredgeservice.controller.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.List;
 
-@Entity
-public class CityInfo {
-    @Id
+public class CityDTO {
+
     private String city;
     private String country;
     private String continent;
     private BigDecimal totalScore;
     private BigDecimal costOfLife;
-    private Integer remoteWorkers;
-
+    private int remoteWorkers;
     private String internet;
-
     private String fun;
-
     private String nightlife;
-
     private String safety;
-
     private String lackOfCrime;
-
     private String walkability;
-
     private String racism;
-
     private String foreignersFriendly;
-
     private String freedomOfSpeech;
-
     private String femaleFriendly;
-    @Column(name = "LGBTQ_friendly")
     private String LGBTQFriendly;
-
     private String englishSpeaking;
     private BigDecimal latitude;
     private BigDecimal longitude;
-
     private String nearBeach;
     private String photo;
+    private List<WeatherDTO> weatherDetails;
 
-
-    public CityInfo() {
-    }
-
-    public CityInfo(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, Integer remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo) {
+    public CityDTO(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, int remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo, List<WeatherDTO> weatherDetails) {
         this.city = city;
         this.country = country;
         this.continent = continent;
@@ -71,6 +52,10 @@ public class CityInfo {
         this.longitude = longitude;
         this.nearBeach = nearBeach;
         this.photo = photo;
+        this.weatherDetails = weatherDetails;
+    }
+
+    public CityDTO() {
     }
 
     public String getCity() {
@@ -113,11 +98,11 @@ public class CityInfo {
         this.costOfLife = costOfLife;
     }
 
-    public Integer getRemoteWorkers() {
+    public int getRemoteWorkers() {
         return remoteWorkers;
     }
 
-    public void setRemoteWorkers(Integer remoteWorkers) {
+    public void setRemoteWorkers(int remoteWorkers) {
         this.remoteWorkers = remoteWorkers;
     }
 
@@ -247,5 +232,13 @@ public class CityInfo {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public List<WeatherDTO> getWeatherDetails() {
+        return weatherDetails;
+    }
+
+    public void setWeatherDetails(List<WeatherDTO> weatherDetails) {
+        this.weatherDetails = weatherDetails;
     }
 }
