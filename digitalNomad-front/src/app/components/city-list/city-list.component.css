@@ -1,35 +1,114 @@
-.city-title {
+/* 
+* {
+    box-sizing: border-box;
+  }
+  
+  .columna {
+    float: left;
+    width: 33%;
+    padding-right: 5px;
+  }
+  
+  .fila::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+
+  .city-title {
     position: absolute;
     color: cornflowerblue;
     font-weight: bolder;
 }
-
 .city-container {
-    /* visualizar varias fotos por fila */
-    display: flex;  
-    flex-wrap: wrap; /* wrap: quebra a linha */
-    justify-content: left; /* centraliza o conteudo */
-    align-items: top; /* centraliza o conteudo */
-    margin: 0 auto; /* centraliza o conteudo */
-    width: 20%; /* largura total */
-    height: 100%; /* altura total */
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    padding: 0 5px;
-    margin: auto;
-    margin-top: 10px;
-    
+  width: 270px;
+  background-color: rgb(50, 50, 50);
+  margin: 20px;
+  padding:5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  display:inline;
+  float:left;
+  /* position: absolute;  */
+  /* top:500px;  */
+  left: 50px; 
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 
-   
-  
-  
-   
+  /* .city-container:hover{
+    opacity:1;
+    transition-duration: 0.4s;
+    background-color: #127aa7; 
+    color: rgb(35, 34, 34);
+    margin-top: 500px;
+
+  } */
+  .article:imagen {
+    border: 1px solid;
+  }
+  /* .pat:hover {
+    opacity:1;
+    transition-duration: 0.4s;
+    background-color: #4CAF50; 
+    color: rgb(35, 34, 34);
+    flex-direction: row;
+  } */
+  /* .imagen:hover {  
+    opacity:1;
+    transition-duration: 0.4s;
+    background-color: #4CAF50; 
+    color: rgb(35, 34, 34);
+  } */
+  .button:hover {
+    background-color: #4CAF50; 
+    top:200px; 
+    left: 450px; 
  
+  }
+  h1 {
+    background-position: center center;
+    position: absolute; 
+    top:500px; 
+    left: 50px; 
 
-    
+  }
+
+  .imagen {
+    flex-direction: row;
+    top: 700px;
+  }
+  
+
+  .buttons-cont{
+    position:absolute;
+    bottom:400px;
+    right:30px;
+  }
+  /* .selection-buttons{
+    position:absolute;
+    bottom:500px;
+    left:5px;
+  } */
+
+.filter-button {
+  border-radius: 10px;
+  padding: 3px 32px;
+  text-align: center;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+
+.filter-button-selected {
+  border-radius: 10px;
+  padding: 3px 32px;
+  text-align: center;
+  font-size: 16px;
+  background-color: darkcyan;
+  color:white;
 }
 

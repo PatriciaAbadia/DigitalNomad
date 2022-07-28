@@ -31,13 +31,18 @@ public class WeatherDetailControllerImpl {
     }
     @GetMapping("/filtredWeathers")
     @ResponseStatus(HttpStatus.OK)
-    public List<WeatherDetail> findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(@RequestParam Optional<String> citySeason,
+    public List<WeatherDetail> findBySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(@RequestParam Optional<String> season,
                          @RequestParam Optional<String> feelWeather, @RequestParam Optional<String> realWeather,
                          @RequestParam Optional<String> feelDamp, @RequestParam Optional<String> isRainy) {
-        if (citySeason.isPresent() && feelWeather.isPresent() && realWeather.isPresent() && feelDamp.isPresent() && isRainy.isPresent()) {
-            return weatherDetailRepository.findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(citySeason.get(),
+        if (season.isPresent() && feelWeather.isPresent() && realWeather.isPresent() && feelDamp.isPresent() && isRainy.isPresent()) {
+            return weatherDetailRepository.findBySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(season.get(),
                     feelWeather.get(), realWeather.get(), feelDamp.get(), isRainy.get());
         }
         return null;
+    }
+    @GetMapping("/weathers/cities/{city}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<WeatherDetail>findWeatherByCity(@PathVariable String city) {
+        return weatherDetailRepository.findByCity(city);
     }
 }

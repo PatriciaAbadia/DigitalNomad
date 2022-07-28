@@ -26,6 +26,12 @@ public class WeatherDetailControllerImpl {
     public WeatherDTO findByCitySeason(@PathVariable String citySeason) {
         return weatherDetailService.findByCitySeason(citySeason);
     }
+    @GetMapping("/weathers/cities/{city}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<WeatherDTO>findWeathersByCity(@PathVariable String city) {
+        return weatherDetailService.findWeathersByCity(city);
+    }
+
     @GetMapping("/filtredWeathers")
     @ResponseStatus(HttpStatus.OK)
     public List<WeatherDTO> findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(@RequestParam Optional<String> citySeason,

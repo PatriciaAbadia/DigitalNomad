@@ -1,48 +1,71 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container">
-    <h1> City List </h1>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/merton');
+    </style>
 
-<div class="continent selection buttons">
-    <button (click)="findByContinent('Africa')">Africa</button>
-    <button (click)="findByContinent('Asia')">Asia</button>
-    <button (click)="findByContinent('Europe')">Europe</button>
-    <button (click)="findByContinent('North America')">North America</button>
-    <button (click)="findByContinent('Oceania')">Oceania</button>
-    <button (click)="findByContinent('Latin America')">South America</button>
-    <button (click)="findByContinent('Middle East')">Middle East</button>
 
- 
+
+<h1> City List </h1>
+
+<div class="buttons-cont">
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 42px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Africa')">Africa</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 47px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Asia')">Asia</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 37px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Europe')">Europe</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 13px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('North America')">North America</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 34px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Oceania')">Oceania</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 12px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Latin America')">South America</button>
+    <button class="hover" style="border-radius: 10px; display: block;padding: 3px 22px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByContinent('Middle East')">Middle East</button>
+
+    
 
 </div>
 
-<div class="selection buttons">
-    <!-- <input type="number" placeholder="Insert a min.Score" (keyup.enter)=""> -->
+<div class="selectionbuttons">
+    <input type="number" placeholder="Insert a min.Score" (keyup.enter)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()" [(ngModel)]="costOfLife" />
+
     <!-- <input type="number" placeholder="Insert a max.Cost of living" (keyup.enter)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()
         <option *ngFor="let city of cities" [value]="city.city">{{city.city}}</option> -->
-    <button (click)="cities">Internet</button>
-    <button (click)="cities">Safety</button>
-    <button (click)="cities">Lack of Crime</button>
-    <button (click)="cities">Walkability</button>
-    <button (click)="cities">Lack of racism</button>
-    <button (click)="cities">Friendly to foreigners</button>
-    <button (click)="cities">Female friendly</button>
-    <button (click)="cities">LGTBTQ friendly</button>
-    <button (click)="cities">Freedom of speech</button>
-    <button (click)="cities">English speaking</button>
-    <button (click)="cities">Fun</button>
-    <button (click)="cities">Nightlife</button>
-    <button (click)="cities">Near of a beach</button>
+    <button [ngClass]="{'filter-button': !internetIsSelected, 'filter-button-selected': internetIsSelected}"(click)="swapInternet()">Internet</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()">Safety</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()">Safety</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Lack of Crime</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Walkability</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Lack of racism</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Friendly to foreigners</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Female friendly</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">LGTBTQ friendly</button> <br>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Freedom of speech</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">English speaking</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Fun</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Nightlife</button>
+    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Near of a beach</button>
 
 
 </div>
-<div class="city-container" *ngFor="let city of cities">
-    <p class="city-title"> {{city.city}} - {{city.country}}</p>
-    <a routerLink="/cityDetail"><img src= {{city.photo}} alt="" data-i="1" data-slug="warsaw"> </a>
+
+
+
+
+
+<section class="city-container" *ngFor="let city of selectedCities | paginate: {itemsPerPage: 8, currentPage: page, totalItems: totalCities}">
+
+    <article class="city-title"> {{city.city}} - {{city.country}}</article>
+    <article class="imagen">
+        <a [routerLink]="['/cities', city.city]">
+            <img style="width: 300px; height: 200px;" src= {{city.photo}} alt="" >
+        </a>
+    </article>
+    
+    <!-- (click)="findByCity(city.city)" /////funcion a incluir arriba-->
+    
     <!-- <div class="city"> -->
     <!-- <img> mat-button (click)="openDialog(city)" src="{{city.photo}}" alt="{{city.city}}"> -->
     <!-- <h2>{{city.city}}</h2> -->
    
-</div>
+</section>
 
 <!-- <a href="http://www.secretariaplus.com"> <img src="ejecutivaanimada.gif"> </a> -->
+<div pagination>
+    <pagination-controls style="position:absolute; bottom:0px; right:200px;"(pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>

@@ -36,5 +36,7 @@ public class WeatherDetailServiceImpl implements WeatherDetailService {
         return weatherDetailsServiceClient.findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(citySeason,
                 feelWeather, realWeather, feelDamp, isRainy);
     }
-
+    public List<WeatherDTO> findWeathersByCity(String city) {
+        return weatherDetailsServiceClient.findWeathersByCity(city);
+    }
 }

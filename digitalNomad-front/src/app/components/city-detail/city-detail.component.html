@@ -1,26 +1,55 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container">
-    <h1>{{ city.city }} - {{ city.country }}</h1>
-    <img src= {{city.photo}} alt="" weigh="200">
+<body>
+<div class="container">    
+    <img style="border:6px solid rgb(50, 53, 50);border-radius:4px;display:block;margin-left:auto;margin-right:auto;margin-top:0%; width:50%" src= {{city.photo}} alt="">
     <!-- <button (click)="goBack()">Back</button> -->
-    <h3> Total score: {{city.totalScore}}/5</h3>
-    <h3> Cost of life: {{city.costOfLife}}$/month </h3>
-    <h3> Internet: {{city.internet}}</h3>
-    <h3> Safety: {{city.safety}} </h3>
-    <h3> Lack of crime: {{city.lackOfCrime}} </h3>
-    <h3> Walkability: {{city.walkability}} </h3>
-    <h3> Lack of racism: {{city.racism}} </h3>
-    <h3> Friendly to foreigners: {{city.foreignersFriendly}} </h3>
-    <h3> Female friendly: {{city.femaleFriendly}} </h3>
-    <h3> LGTBTQ friendly: {{city.lgbtqFriendly}} </h3>
-    <h3> Freedom of speech: {{city.freedomOfSpeech}} </h3>
-    <h3> English speaking: {{city.englishSpeaking}} </h3>
-    <h3> Fun: {{city.fun}} </h3>
-    <h3> Nightlife: {{city.nightlife}} </h3>
-    <h3> Near of a beach: {{city.nearBeach}} </h3>
+  
+    <ul style="position: absolute; top:160px; left: 40px;" class="lista1">
+    <li style="font-size: 50px;list-style:none;"> {{ city.city }}</li>
+    <li style="font-size: 30px;list-style:none;"> {{ city.country }}</li>
+    <li style="font-size: 20px;list-style:none;"> Total score: {{city.totalScore}}/5</li>
+    <li style="font-size: 20px;list-style:none;"> Cost of life: {{city.costOfLife}}$/month </li>
+    <li style="font-size: 20px;list-style:none;"> Remote workers in the city: {{city.remoteWorkers}} </li>
+    <li style="font-size: 20px;list-style:none;"> Internet: {{city.internet}}</li>  
+    <li style="font-size: 20px;list-style:none;"> English speaking: {{city.englishSpeaking}} </li>
+    <li style="font-size: 20px;list-style:none;"> Freedom of speech: {{city.freedomOfSpeech}} </li>
+    </ul>
+
+    <ul style="position: absolute; top:160px; left: 1160px;" class="lista2">
+    <li style="font-size: 20px;list-style:none;"> Safety: {{city.safety}} </li>
+    <li style="font-size: 20px;list-style:none;"> Lack of crime: {{city.lackOfCrime}} </li>
+    <li style="font-size: 20px;list-style:none;"> Walkability: {{city.walkability}} </li>
+    <li style="font-size: 20px;list-style:none;"> Lack of racism: {{city.racism}} </li>
+    <li style="font-size: 20px;list-style:none;"> Friendly to foreigners: {{city.foreignersFriendly}} </li>
+    <li style="font-size: 20px;list-style:none;"> Female friendly: {{city.femaleFriendly}} </li>
+    <!-- <li style="font-size: 20px;list-style:none;"> LGTBTQ friendly: {{city.lgbtqFriendly}} </li> // no aparecen datos--> 
+    <li style="font-size: 20px;list-style:none;"> Fun: {{city.fun}} </li>
+    <li style="font-size: 20px;list-style:none;"> Nightlife: {{city.nightlife}} </li>
+    <li style="font-size: 20px;list-style:none;"> Near of a beach: {{city.nearBeach}} </li>
+    </ul>
 </div>
 
+<!-- <div class="buttons-cont">
+    <button style="border-radius: 10px; display: block;padding: 3px 42px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCitySeason('Africa')">Season from November to April</button>
+    <button style="border-radius: 10px; display: block;padding: 3px 47px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCitySeason('Asia')">Season from May to October</button>
+    </div> -->
 
+    <!-- MOSTRAR BONITO USANDO UN NGFOR O ACCEDIENDO DIRECTAMENTE LA INFO DE CADA WEATHER  -->
+
+<h1>Season: November to April</h1>
+<ul class="season1">
+    <li>Temperature (Feels): {{ weatherList[0].feelWeather }} ({{ weatherList[0].feelTemperature }}º)</li>
+    <li>Temperature (Real): {{ weatherList[0].realWeather }} ({{ weatherList[0].realTemperature }}º)</li>
+    <li>Humidity: {{ weatherList[0].feelDamp }} ({{ weatherList[0].humidity }}%)</li>
+    <li>Rain: {{ weatherList[0].isRainy }} ({{ weatherList[0].rain }}mm)</li>
+</ul>
+<h1>Season: May to October</h1>
+<ul class="season2">
+    <li>Temperature (Feels): {{ weatherList[1].feelWeather }} ({{ weatherList[1].feelTemperature }}º)</li>
+    <li>Temperature (Real): {{ weatherList[1].realWeather }} ({{ weatherList[1].realTemperature }}º)</li>
+    <li>Humidity: {{ weatherList[1].feelDamp }} ({{ weatherList[1].humidity }}%)</li>
+    <li>Rain: {{ weatherList[1].isRainy }} ({{ weatherList[1].rain }}mm)</li>
+</ul>
 
 

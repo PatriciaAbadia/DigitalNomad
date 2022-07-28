@@ -21,7 +21,7 @@ public class CityDTO {
     private String foreignersFriendly;
     private String freedomOfSpeech;
     private String femaleFriendly;
-    private String LGBTQFriendly;
+    private String lgbtqFriendly;
     private String englishSpeaking;
     private BigDecimal latitude;
     private BigDecimal longitude;
@@ -29,7 +29,10 @@ public class CityDTO {
     private String photo;
     private List<WeatherDTO> weatherDetails;
 
-    public CityDTO(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, int remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo, List<WeatherDTO> weatherDetails) {
+    public CityDTO() {
+    }
+
+    public CityDTO(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, int remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String lgbtqFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo, List<WeatherDTO> weatherDetails) {
         this.city = city;
         this.country = country;
         this.continent = continent;
@@ -46,16 +49,13 @@ public class CityDTO {
         this.foreignersFriendly = foreignersFriendly;
         this.freedomOfSpeech = freedomOfSpeech;
         this.femaleFriendly = femaleFriendly;
-        this.LGBTQFriendly = LGBTQFriendly;
+        this.lgbtqFriendly = lgbtqFriendly;
         this.englishSpeaking = englishSpeaking;
         this.latitude = latitude;
         this.longitude = longitude;
         this.nearBeach = nearBeach;
         this.photo = photo;
         this.weatherDetails = weatherDetails;
-    }
-
-    public CityDTO() {
     }
 
     public String getCity() {
@@ -186,12 +186,12 @@ public class CityDTO {
         this.femaleFriendly = femaleFriendly;
     }
 
-    public String getLGBTQFriendly() {
-        return LGBTQFriendly;
+    public String getLgbtqFriendly() {
+        return lgbtqFriendly;
     }
 
-    public void setLGBTQFriendly(String LGBTQFriendly) {
-        this.LGBTQFriendly = LGBTQFriendly;
+    public void setLgbtqFriendly(String lgbtqFriendly) {
+        this.lgbtqFriendly = lgbtqFriendly;
     }
 
     public String getEnglishSpeaking() {

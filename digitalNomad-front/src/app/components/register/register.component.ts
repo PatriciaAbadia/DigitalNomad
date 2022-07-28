@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
         console.log(user);
 
         // Redirect to home page
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
       },
       (error) => {
         alert('Register failed');

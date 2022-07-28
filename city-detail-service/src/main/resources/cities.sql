@@ -1,9 +1,3 @@
-SELECT user, host FROM mysql.user;
-DROP USER 'ironhacker'@'localhost';
-CREATE USER 'ironhacker'@'localhost' IDENTIFIED BY 'Ir0nh4ck3r!';
-GRANT ALL PRIVILEGES ON midProject.* TO 'ironhacker'@'localhost';
-GRANT ALL PRIVILEGES ON midProject_test.* TO 'ironhacker'@'localhost';
-
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
@@ -12,9 +6,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 -- -----------------------------------------------------
 -- Schema mydb
--- -----------------------------------------------------
--- -----------------------------------------------------
--- Schema weather_detail
 -- -----------------------------------------------------
 -- -----------------------------------------------------
 -- Schema city_detail
@@ -46,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `city_detail`.`city_info` (
   `foreigners_friendly` VARCHAR(255) NULL DEFAULT NULL,
   `freedom_of_speech` VARCHAR(255) NULL DEFAULT NULL,
   `female_friendly` VARCHAR(255) NULL DEFAULT NULL,
-  `LGBTQ_friendly` VARCHAR(255) NULL DEFAULT NULL,
+  `lgbtq_friendly` VARCHAR(255) NULL DEFAULT NULL,
   `english_speaking` VARCHAR(255) NULL DEFAULT NULL,
   `latitude` DECIMAL(10,7) NULL DEFAULT NULL,
   `longitude` DECIMAL(10,7) NULL DEFAULT NULL,

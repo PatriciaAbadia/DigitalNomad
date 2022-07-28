@@ -6,8 +6,6 @@ import com.ironhack.weatherdetailservice.service.interfaces.WeatherDetailService
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -26,5 +24,9 @@ public class WeatherDetailServiceImpl implements WeatherDetailService {
         return weatherDetail;
     }
 
+    public List<WeatherDetail> findWeathersByCity(String city) {
+        List<WeatherDetail> weatherDetail = weatherDetailRepository.findByCity(city);
 
+        return weatherDetail;
+    }
 }

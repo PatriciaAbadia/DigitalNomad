@@ -1,4 +1,14 @@
-.body{
-    background: url("https://assets.media-platform.com/bi/dist/images/2018/11/22/5b1af0501ae66219008b4b49.png");
-    background-size: 100%;
+
+.paragraph {
+    width: 1000px;
+    height:14px; 
+    top:45px; 
+    margin-right:0px; 
+    padding-right:0px; 
+    float:both; 
+    position:relative; 
+    overflow:hidden; 
+    list-style:none;
+    float:right;
 }
+

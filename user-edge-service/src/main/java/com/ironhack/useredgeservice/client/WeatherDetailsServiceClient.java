@@ -23,7 +23,10 @@ public interface WeatherDetailsServiceClient {
     @GetMapping("/filtredWeathers")
     List<WeatherDTO> findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(@RequestParam String citySeason,
                                                                                        @RequestParam String feelWeather, @RequestParam String realWeather, @RequestParam String feelDamp, @RequestParam String isRainy);
-}
+    @GetMapping("/weathers/cities/{city}")
+    List<WeatherDTO> findWeathersByCity(@PathVariable String city);
+
+  }
 
 
 

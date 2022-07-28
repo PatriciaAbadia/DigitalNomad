@@ -34,8 +34,8 @@ public class CityInfo {
     private String freedomOfSpeech;
 
     private String femaleFriendly;
-    @Column(name = "LGBTQ_friendly")
-    private String LGBTQFriendly;
+    @Column(name = "lgbtq_friendly")
+    private String lgbtqFriendly;
 
     private String englishSpeaking;
     private BigDecimal latitude;
@@ -48,7 +48,7 @@ public class CityInfo {
     public CityInfo() {
     }
 
-    public CityInfo(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, Integer remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String LGBTQFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo) {
+    public CityInfo(String city, String country, String continent, BigDecimal totalScore, BigDecimal costOfLife, Integer remoteWorkers, String internet, String fun, String nightlife, String safety, String lackOfCrime, String walkability, String racism, String foreignersFriendly, String freedomOfSpeech, String femaleFriendly, String lgbtqFriendly, String englishSpeaking, BigDecimal latitude, BigDecimal longitude, String nearBeach, String photo) {
         this.city = city;
         this.country = country;
         this.continent = continent;
@@ -65,7 +65,7 @@ public class CityInfo {
         this.foreignersFriendly = foreignersFriendly;
         this.freedomOfSpeech = freedomOfSpeech;
         this.femaleFriendly = femaleFriendly;
-        this.LGBTQFriendly = LGBTQFriendly;
+        this.lgbtqFriendly = lgbtqFriendly;
         this.englishSpeaking = englishSpeaking;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -201,12 +201,12 @@ public class CityInfo {
         this.femaleFriendly = femaleFriendly;
     }
 
-    public String getLGBTQFriendly() {
-        return LGBTQFriendly;
+    public String getLgbtqFriendly() {
+        return lgbtqFriendly;
     }
 
-    public void setLGBTQFriendly(String LGBTQFriendly) {
-        this.LGBTQFriendly = LGBTQFriendly;
+    public void setLgbtqFriendly(String lgbtqFriendly) {
+        this.lgbtqFriendly = lgbtqFriendly;
     }
 
     public String getEnglishSpeaking() {

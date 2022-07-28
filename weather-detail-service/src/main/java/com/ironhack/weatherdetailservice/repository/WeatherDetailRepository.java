@@ -13,9 +13,9 @@ public interface WeatherDetailRepository extends JpaRepository<WeatherDetail, St
 
      List<WeatherDetail> findAll();
 
-    List<WeatherDetail> findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(String citySeason,
+    List<WeatherDetail> findBySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(String season,
                                   String feelWeather, String realWeather, String feelDamp, String isRainy);
 
 
-
+    List<WeatherDetail> findByCity(String city);
 }

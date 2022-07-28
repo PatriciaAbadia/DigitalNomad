@@ -19,5 +19,5 @@ public interface WeatherDetailService {
     List<WeatherDTO> findByCitySeasonAndFeelWeatherAndRealWeatherAndFeelDampAndIsRainy(String citySeason,
                           String feelWeather, String realWeather, String feelDamp, String isRainy);
 
-
+    List<WeatherDTO> findWeathersByCity(String city);
 }
