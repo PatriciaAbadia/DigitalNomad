@@ -22,30 +22,23 @@
 </div>
 
 <div class="selectionbuttons">
-    <input type="number" placeholder="Insert a min.Score" (keyup.enter)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()" [(ngModel)]="costOfLife" />
-
+    <input class=insert-import type="number" placeholder="Insert a max.Cost of living" (keyup.enter)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()" [(ngModel)]="costOfLife" />
+   
     <!-- <input type="number" placeholder="Insert a max.Cost of living" (keyup.enter)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()
         <option *ngFor="let city of cities" [value]="city.city">{{city.city}}</option> -->
-    <button [ngClass]="{'filter-button': !internetIsSelected, 'filter-button-selected': internetIsSelected}"(click)="swapInternet()">Internet</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()">Safety</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="findByCostOfLifeLessThanAndSafetyIsAndInternetIs()">Safety</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Lack of Crime</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Walkability</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Lack of racism</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Friendly to foreigners</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Female friendly</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">LGTBTQ friendly</button> <br>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Freedom of speech</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">English speaking</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Fun</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Nightlife</button>
-    <button style="border-radius: 10px; padding: 3px 32px; text-align: center;font-size: 16px;background-color: transparent;"(click)="cities">Near of a beach</button>
-
-
-</div>
-
-
-
+    <button [ngClass]="{'filter-button': !internetIsSelected, 'filter-button-selected': internetIsSelected}"(click)="swapInternet()"><b>Internet</b></button>
+    <button [ngClass]="{'filter-button': !safetyIsSelected, 'filter-button-selected': safetyIsSelected}"(click)="swapSafety()"><b>Safety</b></button>
+    <button class="filter-button"><b>Lack of Crime</b></button>
+    <button [ngClass]="{'filter-button': !walkabilitySelected, 'filter-button-selected': walkabilitySelected}"(click)="swapWalkability()"><b>Walkability</b></button>
+    <button class="filter-button"><b>Lack of racism</b></button>
+    <button class="filter-button"><b>Friendly to foreigners</b></button><br>
+    <input class=insert-import type="number" placeholder="Insert a min.Score"/>
+    <button [ngClass]="{'filter-button': !femaleFriendlySelected, 'filter-button-selected': femaleFriendlySelected}"(click)="swapFemaleFriendly()"><b>Female friendly</b></button>
+    <button class="filter-button"><b>Freedom of speech</b></button>
+    <button [ngClass]="{'filter-button': !englishSpeakingSelected, 'filter-button-selected': englishSpeakingSelected}"(click)="swapEnglishSpeaking()"><b>English speaking</b></button>
+    <button [ngClass]="{'filter-button': !funSelected, 'filter-button-selected': funSelected}"(click)="swapFun()"><b>Fun</b></button>
+    <button [ngClass]="{'filter-button': !nightlifeSelected, 'filter-button-selected': nightlifeSelected}"(click)="swapNightlife()"><b>Nightlife</b></button>
+    <button [ngClass]="{'filter-button': !nearBeachSelected, 'filter-button-selected': nearBeachSelected}"(click)="swapNearBeach()"><b>Near of a beach</b></button>
 
 
 <section class="city-container" *ngFor="let city of selectedCities | paginate: {itemsPerPage: 8, currentPage: page, totalItems: totalCities}">

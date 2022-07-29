@@ -16,8 +16,21 @@ export class CityListComponent implements OnInit {
   continent: string;
   costOfLife!: number;
   safety: string;
-  internet: string
+  safetyIsSelected: boolean;
+  internet: string;
   internetIsSelected: boolean;
+  englishSpeaking: string;
+  englishSpeakingSelected: boolean;
+  walkability: string;
+  walkabilitySelected: boolean;
+  femaleFriendly: string;
+  femaleFriendlySelected: boolean;
+  fun: string;
+  funSelected: boolean;
+  nightlife: string;
+  nightlifeSelected: boolean;
+  nearBeach: string;
+  nearBeachSelected: boolean;
 
   constructor(
     private userEdgeService : UserEdgeService
@@ -29,7 +42,23 @@ export class CityListComponent implements OnInit {
     this.continent="";
     this.safety = "good";
     this.internet = "good";
+    this.englishSpeaking = "good";
+    this.walkability = "good";
+    this.femaleFriendly = "good";
+    this.fun = "good";
+    this.nightlife = "good";
+    this.nearBeach = "good";
+    
+
     this.internetIsSelected = false;
+    this.safetyIsSelected = false;
+    this.englishSpeakingSelected = false;
+    this.walkabilitySelected = false;
+    this.femaleFriendlySelected = false;
+    this.funSelected = false;
+    this.nightlifeSelected = false;
+    this.nearBeachSelected = false;
+
   }
     
   ngOnInit(): void {
@@ -68,6 +97,62 @@ export class CityListComponent implements OnInit {
   swapInternet(): void {
     this.internetIsSelected = !this.internetIsSelected;
     if (this.internetIsSelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapSafety(): void {
+    this.safetyIsSelected = !this.safetyIsSelected;
+    if (this.safetyIsSelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapEnglishSpeaking(): void {
+    this.englishSpeakingSelected = !this.englishSpeakingSelected;
+    if (this.englishSpeakingSelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapWalkability(): void {
+    this.walkabilitySelected = !this.walkabilitySelected;
+    if (this.walkabilitySelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapFemaleFriendly(): void {
+    this.femaleFriendlySelected = !this.femaleFriendlySelected;
+    if (this.femaleFriendlySelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapFun(): void {
+    this.funSelected = !this.funSelected;
+    if (this.funSelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapNightlife(): void {
+    this.nightlifeSelected = !this.nightlifeSelected;
+    if (this.nightlifeSelected) {
+      // this.internet = "good";
+    } else {
+      // this.internet = "bad";
+    }
+  }
+  swapNearBeach(): void {
+    this.nearBeachSelected = !this.nearBeachSelected;
+    if (this.nearBeachSelected) {
       // this.internet = "good";
     } else {
       // this.internet = "bad";

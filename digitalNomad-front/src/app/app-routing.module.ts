@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CityDetailComponent } from './components/city-detail/city-detail.component';
 import { CityListComponent } from './components/city-list/city-list.component';
-import { HeaderComponent } from './components/welcome/welcome.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -14,6 +14,12 @@ const routes: Routes = [
     // canActivate: [AuthGuardService],
     component: HomeComponent,
   },
+  {
+    path: 'welcome',
+    // canActivate: [AuthGuardService],
+    component: WelcomeComponent,
+  },
+
   {
     path: 'login',
     component: LoginComponent,

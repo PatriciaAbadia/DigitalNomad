@@ -1,6 +1,4 @@
 <app-nav-bar></app-nav-bar>
-
-
 <div class="container">
     <form (ngSubmit)="register()">
         <mat-card class="card">
@@ -12,21 +10,21 @@
                 <div class="login-container">
                     <div class="login-fields">
                         <mat-form-field class="full-width" appearance="fill">
-                            <mat-label>Username</mat-label>
+                            <!-- <mat-label>Username</mat-label> -->
                             <input type="text" matInput formControlName="username" placeholder="Username...">
                             <mat-error *ngIf="usernameInput.hasError('required') && usernameInput.touched">
                               Username is <strong>required</strong>
                             </mat-error>
                           </mat-form-field>
                           <mat-form-field class="full-width" appearance="fill">
-                            <mat-label>Password</mat-label>
+                            <!-- <mat-label>Password</mat-label> -->
                             <input type="password" matInput formControlName="password" placeholder="Passworrd...">
                             <mat-error *ngIf="passwordInput.hasError('required') && passwordInput.touched">
                               Password is <strong>required</strong>
                             </mat-error>
                           </mat-form-field>
                           <mat-form-field class="full-width" appearance="fill">
-                            <mat-label>Password Confirmation</mat-label>
+                            <!-- <mat-label>Password Confirmation</mat-label> -->
                             <input type="password" matInput formControlName="passwordConfirmation" placeholder="Passworrd Confirmation...">
                             <mat-error *ngIf="registerForm.hasError('passwordMatch') && passwordInput.valid && passwordConfirmationInput.touched">
                                 Passwords do not match

@@ -13,7 +13,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RegisterComponent } from './components/register/register.component';
-import { HeaderComponent } from './components/welcome/welcome.component';
 import { CityListComponent } from './components/city-list/city-list.component';
 import { CityDetailComponent } from './components/city-detail/city-detail.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,6 +20,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ContinentSelectionComponent } from './components/continent-selection/continent-selection.component';
 import { NgxPaginationModule } from "ngx-pagination";
 import { FiltersComponent } from './components/filters/filters.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { CommentsComponent } from './components/comments/comments.component';
+
 
 
 
@@ -31,12 +33,14 @@ import { FiltersComponent } from './components/filters/filters.component';
     LoginComponent,
     RegisterComponent,
     NavBarComponent,
-    HeaderComponent,
+    WelcomeComponent,
     CityListComponent,
     CityDetailComponent,
     FooterComponent,
     ContinentSelectionComponent,
-    FiltersComponent
+    FiltersComponent,
+    CommentsComponent,
+
   ],
   imports: [
     BrowserModule,

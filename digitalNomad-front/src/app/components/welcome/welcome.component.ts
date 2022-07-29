@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class WelcomeComponent implements OnInit {
   
   username: string | null;
   constructor() { 

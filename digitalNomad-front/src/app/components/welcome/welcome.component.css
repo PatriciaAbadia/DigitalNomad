@@ -2,10 +2,12 @@
       .container {
         font-family: 'Merton', sans-serif;
         color: rgba(28, 28, 28, 0.996);
-        text-align: left;
-        padding: 14px 16px;
+        text-align: right;
+        padding: 0px 7px;
         text-decoration: none;
-        font-size: 40px; 
+        font-size: 30px; 
+        margin-top: 20px;
+    
     } 
     main {
         color: rgba(28, 28, 28, 0.996);
